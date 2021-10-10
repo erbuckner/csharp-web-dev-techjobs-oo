@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+
 namespace TechJobsOO
 {
     public class Job
@@ -44,6 +46,32 @@ namespace TechJobsOO
 
         public override string ToString()
         {
+            if (this.Value == "")
+            {
+                this.Value = "Data not available";
+            }
+            else if (this.EmployerName.Value == "")
+            {
+                this.EmployerName.Value = "Data not available";
+            }
+            else if (this.EmployerLocation.Value == "")
+            {
+                this.EmployerLocation.Value = "Data not available";
+            }
+            else if (this.JobType.Value == "")
+            {
+                this.JobType.Value = "Data not available";
+            }
+            else if (this.JobCoreCompetency.Value == "")
+            {
+                this.JobCoreCompetency.Value = "Data not available";
+            }
+
+            if (this.Id != 0 && this.Value == "Data not available" && this.EmployerName.Value == "Data not available" && this.EmployerLocation.Value == "Data not available" && this.JobType.Value == "Data not available" && this.JobCoreCompetency.Value == "Data not available")
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+
             return $"\nID: {this.Id} \n" +
                 $"Name: {this.Value} \n" +
                 $"Employer: {this.EmployerName.Value} \n" +
