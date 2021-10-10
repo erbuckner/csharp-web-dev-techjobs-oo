@@ -26,7 +26,7 @@ namespace TechJobsOO
             EmployerName = employerName;
             EmployerLocation = employerLocation;
             JobType = jobType;
-            JobCoreCompetency = JobCoreCompetency;
+            JobCoreCompetency = jobCompetency;
         }
 
         // TODO: Generate Equals() and GetHashCode() methods.
