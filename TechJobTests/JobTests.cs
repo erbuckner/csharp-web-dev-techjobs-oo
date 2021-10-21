@@ -12,7 +12,7 @@ namespace TechJobTests
          Job testJobObject1 = new Job();
          Job testJobObject2 = new Job();
 
-            Assert.IsFalse(Job.Equals(testJobObject1, testJobObject2));
+            Assert.IsFalse(testJobObject1.Equals(testJobObject2));
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace TechJobTests
             Job testJobObject1 = new Job("Product tester", acme, desert, qualityControl, persistence);
             Job testJobObject2 = new Job("Product tester", acme, desert, qualityControl, persistence);
 
-            Assert.IsFalse(Job.Equals(testJobObject1, testJobObject2));
+            Assert.IsFalse(testJobObject1.Equals(testJobObject2));
         }
 
         [TestMethod]
